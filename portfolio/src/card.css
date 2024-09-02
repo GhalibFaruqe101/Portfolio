@@ -1,38 +1,57 @@
 
 .card{
-    
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0; /* Reset margin if necessary */
-    padding: 20px;
+    position: relative;
+    display: inline-block;
     width: 80px;
-    box-shadow: 5px 5px 5px #8f8c8b;
-    text-align: center;
-    background-color: black; 
-    color: azure;
-    /* display: inline-block; */
-}
-.profileImage{
+    height: 80px;;
     border-radius: 50%;
-    width:80px;
-    height: 50px;
-    height: 80px;
-    object-fit: cover;
-    margin-bottom: 12px;
-    box-shadow: inset;
-
+    
+    
 }
-.info{
- /* padding: 500px;   
- width: ;
+.profileImage {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: relative; 
+}
 
- color: bisque;
- /* margin-top:auto; */
- /* display: flex;
- justify-content: center;
- align-items: center; */ 
+@property --angle{
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+.card::after, .card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: -1;
+    padding: 6px;
+    background-image: conic-gradient(from var( --angle),white, rgb(31, 30, 28));
+     animation: spin 3s linear infinite;
+}
+.card::before{
+    filter: blur(2.5rem);
+    opacity: 0.2;
+}
+@keyframes spin{
+    from{
+     --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+
+    }
+}
+
+
+.info{
+
  background-color: #312d2d;
  color: aliceblue;
     position: absolute;

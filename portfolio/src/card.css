@@ -1,10 +1,17 @@
 
+body{
+    background-color:rgba(255, 249, 249, 0.503) ;
+    max-height: 100vh;
+}
 .card{
     position: relative;
     display: inline-block;
     width: 80px;
     height: 80px;;
     border-radius: 50%;
+    z-index: 1;
+    margin-top: -50px;
+    margin-left: 5px;
     
     
 }
@@ -13,6 +20,7 @@
     width: 80px;
     height: 80px;
     position: relative; 
+   
 }
 
 @property --angle{
@@ -52,15 +60,22 @@
 
 .info{
 
- background-color: #312d2d;
- color: aliceblue;
-    position: absolute;
-    top: 45%;
+ background-color: hsl(0, 7%, 94%);
+ color: #010101;
+ text-align: center;
+   
+    
     left: 50%;
+    top:20rem;
+   
+   
+    position:relative;
+   
     transform: translate(-50%, -50%);
     width: 50%;
-    padding: 150px;
-    box-shadow: 50px 50px 50px #0f0e0e;
+    height:30rem;
+    border-radius: 3%;
+    box-shadow: 50px 50px 50px #383737b6;
 
     
 

@@ -13,7 +13,7 @@ function Card(){
             <p>There are few issues that we need to fix</p>
 
         </div>
-        {/* </div> */}
+        
         </>
     );
 }

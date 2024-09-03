@@ -1,6 +1,7 @@
 import './nav.css';
 function Header(){
     return(
+            <>
         <header>
             
             <nav>
@@ -13,11 +14,11 @@ function Header(){
 
                 </ul>
             </nav>
-            <hr></hr>
             
            
 
         </header>
+            </>
     );
 }
 export default Header

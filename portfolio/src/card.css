@@ -40,7 +40,7 @@ body{
     transform: translate(-50%, -50%); 
     z-index: -1;
     padding: 6px;
-    background-image: conic-gradient(from var( --angle),white, rgb(31, 30, 28));
+    background-image: conic-gradient(from var( --angle), rgb(16, 15, 15), rgba(13, 13, 13, 0.775));
      animation: spin 3s linear infinite;
 }
 .card::before{
